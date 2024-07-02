@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --page-background-color:#E5E5E5;
+    --button-encript-color:#0A3871;
+    --button-decrypt-color:#D8DFE8;
+}
+
+header{
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--page-background-color);
+}
+main{
+    width: 100%;
+}
+
+#alure-logo{
+    margin-top: 20px;
+   
+}
+
+.body-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+
+}
+/* Left Side */
+
+.left-container{
+
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    align-items: center;
+    
+ 
+}
+
+.button-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.warning-icon{
+    width: 18px;
+    height: 18px;
+
+}
+
+.warning-text{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: gray;
+    font-size: 1.1rem;
+}
+
+
+.encrypt-button{
+    background-color: var(--button-encript-color);
+    border-radius: 24px;
+    width: 20rem;
+    height: 4.25rem;
+    color: var(--button-decrypt-color);
+    font-size: 1.2rem;
+}
+
+
+.decrypt-button{
+    background-color: var(--button-decrypt-color);
+    border-radius: 24px;
+    width: 20rem;
+    height: 4.25rem;
+    color: var(--button-encript-color);
+    font-size: 1.3rem;
+}
+
+#message-text-area{
+ 
+    
+    background-color: transparent;
+    height: 70vh;
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 5rem;
+    font-size: 1.5rem;
+    color: var(--button-encript-color);
+    border: none;
+    outline: none;
+    resize: none; 
+
+}
+
+
+#message-text-area::placeholder {
+    color: var(--button-encript-color);
+}
+
+/*Right container*/
+
+.right-container{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    min-width: 380px;
+    justify-content: center;
+    
+}
+
+#result-container{
+    display: flex;
+    background-color: white;
+    min-height: 90%;
+    width: 90%;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+    align-content: center;
+   
+
+}
+
+
+.text-area-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+
+#result-info{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+}
+
+#result-info-{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+}
+
+.not-text-img{
+ 
+    width: 80%;
+    height: auto;
+
+}
+
+.not-message-found{
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 80%;
+    text-align: center;
+}
+
+.not-message-found-error{
+    color: gray;
+    width: 80%;
+    text-align: center;
+}
+
+#text-info{
+    color: black;
+    font-size: 1.5rem;
+    width: 100%;
+    word-wrap: break-word;  
+    height: 100%;
+ 
+}
+
+.text-items-container{
+    width: 90%;
+    height: fit-content;
+    overflow-y: auto;
+    margin-top: 1.3rem;
+    max-height: 800px; 
+
+}
+
+.copy-button{
+    margin-bottom: 1rem;
+    background-color: var(--button-decrypt-color);
+    border-radius: 24px;
+    width: 90%;
+    height: 4.25rem;
+    color: var(--button-encript-color);
+    font-size: 1.3rem;
+}
+
+
+@media (max-width:768px){
+
+    #message-text-area{
+        margin-right: 0;
+        
+    }
+    
+    
+    .body-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    
+    }
+
+    .left-container{
+        height: auto;
+        min-width: auto;
+        width: 90%;
+    }
+
+    #message-text-area{
+        height: 60vh;
+        min-height: 377px;
+        width: 100%;
+    
+    }
+    .right-container{
+        width: 95%;
+        height: auto;
+        min-width: auto;
+        margin: 0;
+
+    }
+
+    .not-text-img{
+        display: none;
+    }
+
+    #result-container{
+        height: auto;
+        display: flex;       
+    }
+    #result-info{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1rem 0;
+       
+    }
+
+    @media (max-width:375px) {
+
+        .button-container{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+
+
+        .encrypt-button{
+            width: 100%;
+            }
+            
+            .left-container{
+                height: auto;
+                min-width: auto;
+                width: 95%;
+            }
+            
+            .decrypt-button{
+           
+                width: 95%;
+                height: 4.25rem;
+            
+            }
+            .right-container{
+                width: 100%;
+            }
+     
+    }
+
+      
+
+
+}
